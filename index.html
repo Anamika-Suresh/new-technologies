@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Technologies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    card.addEventListener('mouseover', () => {
+  document.body.style.background = `linear-gradient(to right, #${Math.floor(Math.random()*16777215).toString(16)}, #2c5364)`;
+});
+
+card.addEventListener('mouseout', () => {
+  document.body.style.background = 'linear-gradient(to right, #0f2027, #203a43, #2c5364)';
+});
+const headerText = "Explore Technologies";
+const headerEl = document.querySelector("header h1");
+let index = 0;
+
+function typeWriter() {
+  if (index < headerText.length) {
+    headerEl.innerHTML += headerText.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+headerEl.innerHTML = "";
+typeWriter();
+</script>
+<body>
+  <header>
+    <h1>Explore Technologies</h1>
+    <p>Discover Robotics, AI, Data Science & more</p>
+  </header>
+
+  <main id="technology-container">
+   
+  </main>
+
+  <footer>
+    <p>© 2025 Tech World</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
