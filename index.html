@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Technologies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Explore Technologies</h1>
+    <p>Discover Robotics, AI, Data Science & more</p>
+  </header>
+
+  <main id="technology-container">
+   
+  </main>
+
+  <footer>
+    <p>© 2025 Tech World</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+
+const headerText = "Explore Technologies";
+const headerEl = document.querySelector("header h1");
+let index = 0;
+
+function typeWriter() {
+  if (index < headerText.length) {
+    headerEl.innerHTML += headerText.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+headerEl.innerHTML = "";
+typeWriter();
+
+  </script>
+</body>
+</html>
